@@ -6,7 +6,7 @@ defmodule Airbrake.Payload do
     url: Airbrake.Mixfile.project()[:package][:links][:github]
   }
 
-  defstruct apiKey: nil, notifier: @notifier_info, errors: nil
+  defstruct apiKey: nil, context: nil, notifier: @notifier_info, errors: nil
 
   def new(exception, stacktrace, options \\ [])
 
